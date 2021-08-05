@@ -20,6 +20,7 @@ We are Educational And Open Course To Making Understand All About Protocol Block
 
 
 ## Cara Berkontribusi Tulisan / Artikel (How To Contribution)
+silahkan email kami [dev@blockchains.studio](mailto:dev@blockchains.studio)
 
 ### Development
 
