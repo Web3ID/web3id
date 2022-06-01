@@ -1,60 +1,52 @@
-import Head from 'next/head';
-import { Container, Divider, Text } from '@nextui-org/react';
-
-import { getPosts } from '../lib/api';
-import Overview from '../components/Overview';
-import Hero from '../components/Hero';
-
-const Home = ({ posts = [] }: any) => {
-  return (
-    <div>
-      <Head>
-        <title>Blog - a Next.js app using NextUI as a react UI library</title>
-        <meta
-          name="description"
-          content="a Next.js app using NextUI as a react UI library"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Hero />
-      <Container
-        as="main"
-        css={{
-          marginTop: '2rem',
-          maxW: '75rem',
-        }}
-      >
-        <Divider />
-        <Text
-          h2
-          css={{
-            fontSize: '3rem',
-            mb: '2rem',
-            px: '1rem',
-            '@sm': {
-              px: '1.5rem',
-              fontSize: '5rem',
-            },
-          }}
-        >
-          Tech & more
-        </Text>
-        <Overview posts={posts.results} />
-      </Container>
-    </div>
-  );
-};
-
-export default Home;
+import { InferGetStaticPropsType } from 'next'
+import { ArticlesCarousel, ArticlesList } from '@components/article'
+import { fetchAPI, getNavigation } from '@lib/api'
+import { Layout } from '@components/common/Layout'
+import { useMediaQuery } from '@lib/hooks/use-media-queries'
+import ArticlesHero from '@components/article/ArticlesHero/ArticlesHero'
 
 export async function getStaticProps() {
-  // Get all posts from the Notion database
-  const posts: any = await getPosts();
+  const articles: TArticle[] = await fetchAPI('/articles')
+  const navigation: TNavigation = await getNavigation()
 
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 60,
-  };
+  return { props: { articles, navigation } }
 }
+
+function Home({
+  articles,
+  navigation,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const isTablet = useMediaQuery(1023)
+
+  return (
+    <Layout navigation={navigation}>
+      {isTablet ? (
+        //Tablet and smaller devices
+        <ArticlesCarousel title="Top stories" articles={articles.slice(0, 4)} />
+      ) : (
+        <ArticlesHero articles={articles.slice(0, 4)} />
+      )}
+
+      <ArticlesList articles={articles.slice(5, 10)} title="Recent" />
+
+      <div className="lg:py-24 lg:flex lg:w-full lg:gap-28 lg:mx-auto">
+        <ArticlesList
+          articles={articles.slice(0, 5)}
+          title="Featured"
+          variant="top"
+          className="lg:w-1/2"
+        />
+        <ArticlesList
+          articles={articles.slice(6, 11)}
+          title="Popular"
+          variant="top"
+          className="lg:w-1/2"
+        />
+      </div>
+
+      <ArticlesList articles={articles.slice(10, 15)} title="More articles" />
+    </Layout>
+  )
+}
+
+export default Home

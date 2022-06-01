@@ -1,4 +1,4 @@
-# Web 3 Indonesia
+# dAppsID Blog Education By Web3Indonesia
 We are Educational And Open Course To Making Understand All About Protocol Blockchain For Indonesia
 
 ## Features
@@ -37,16 +37,13 @@ masuk ke "Setting" > "Users & permissions plugins" > "Public" > "Permissions" da
 
 Anda dapat mulai mendaftar administrator kemudian mengedit dan menambahkan konten halaman , plugin, dan juga content type builder. dan setelah selesai silahkan push ke repositori ini.
 
-## Stack
-- `Strapi CMS` For Backend
-- `NextJS` For Frontend, [Check This Repo](https://github.com/Blockchains-Studio/frontend-blockchain-studio-indonesia) to use Frontend
 
 ## Cara Berkontribusi Tulisan / Artikel (How To Contribution)
-silahkan email kami [dev@blockchains.studio](mailto:dev.blockchain.studio@gmail.com)
+silahkan email kami [support@web30.my.id](mailto:web3.indonesia@gmail.com)
 
 ## License
 
-[MIT License](https://github.com/Blockchains-Studio/blockchain-studio-indonesia/blob/main/LICENSE).
+[MIT License](https://github.com/Web3ID/web3id/blob/main/LICENSE).
 
 # OUR SPONSOR AND PARTNER
 

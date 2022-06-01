@@ -1,36 +1,97 @@
 {
-  "name": "blog",
-  "private": true,
+  "name": "web3id",
+  "version": "0.1.0",
+  "description": "Blog Education dAppsID by Web3ID",
+  "main": "index.js",
+  "author": "Abraham Yusuf",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web3ID/web3id.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Web3ID/web3id/issues"
+  },
+  "homepage": "https://github.com/Web3ID/web3id#readme",
   "scripts": {
     "dev": "next dev",
+    "dev:inspect": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "type-check": "tsc --pretty --noEmit",
+    "lint": "eslint . --ext .ts --ext .tsx --ext .js",
+    "lint:fix": "eslint . --ext .ts --ext .tsx --ext .js --fix",
+    "format": "prettier . --write",
+    "find:unused": "next-unused",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "next-unused": {
+    "debug": true,
+    "alias": {
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
+    },
+    "include": [
+      "components",
+      "lib",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@nextui-org/react": "^1.0.2-beta.2",
-    "@notionhq/client": "^0.4.13",
-    "@types/react-headroom": "^2.2.2",
-    "lodash": "^4.17.21",
-    "next": "12.0.9",
-    "next-themes": "^0.0.15",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-feather": "^2.0.9",
-    "react-headroom": "^3.2.0",
-    "react-use": "^17.3.2"
+    "body-scroll-lock": "^3.1.5",
+    "classnames": "^2.2.6",
+    "idb-keyval": "5.0.4",
+    "next": "^10.0.1",
+    "next-offline": "^5.0.3",
+    "next-seo": "^4.17.0",
+    "next-themes": "0.0.14",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.178",
-    "@types/node": "17.0.12",
-    "@types/react": "17.0.38",
-    "babel-plugin-transform-remove-console": "^6.9.4",
-    "eslint": "8.7.0",
-    "eslint-config-next": "12.0.9",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "4.5.5"
+    "@types/body-scroll-lock": "^2.6.1",
+    "@types/classnames": "^2.2.11",
+    "@types/gtag.js": "^0.0.4",
+    "@types/node": "^14.14.7",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "autoprefixer": "^10.0.2",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "next-unused": "0.0.6",
+    "postcss": "^8.1.10",
+    "postcss-nesting": "^7.0.1",
+    "prettier": "^2.1.2",
+    "tailwindcss": "^2.0.1",
+    "typescript": "^4.0.5"
   }
 }
