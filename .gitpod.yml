@@ -4,6 +4,6 @@
 
 tasks:
   - init: yarn install && yarn run dev
-    command: yarn run dev
+    command: cp .env .example .env && yarn run dev
 
 
