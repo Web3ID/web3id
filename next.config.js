@@ -3,15 +3,15 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 const path = require('path')
 
 const withOffline = require('next-offline')
-// const nextOfflineConfig = {
-//   generateInDevMode: false,
-//   dontAutoRegisterSw: true,
-//   generateSw: false,
-//   workboxOpts: {
-//     swDest: 'static/service-worker.js',
-//     swSrc: path.join(__dirname, 'sw.js'),
-//   },
-// }
+const nextOfflineConfig = {
+  generateInDevMode: false,
+  dontAutoRegisterSw: true,
+  generateSw: true,
+  workboxOpts: {
+    swDest: 'static/service-worker.js',
+    swSrc: path.join(__dirname, 'sw.js'),
+  },
+}
 
 module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
@@ -26,7 +26,7 @@ module.exports = (phase) => {
   return withOffline({
     generateInDevMode: false,
     dontAutoRegisterSw: true,
-    generateSw: false,
+    generateSw: true,
     workboxOpts: {
       swDest: 'static/service-worker.js',
       swSrc: path.join(__dirname, 'sw.js'),
