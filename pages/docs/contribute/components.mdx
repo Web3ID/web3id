@@ -1,0 +1,309 @@
+---
+title: komponen kustom
+description: Tingkatkan artikel Anda dengan komponen khusus/kustom!
+---
+
+import { Tabs, Tab, FileTree } from "nextra-theme-docs";
+import {
+  Accordion,
+  Admonition,
+  Tip,
+  Warning,
+  Info,
+  Card,
+  Cards,
+  LinkButton,
+} from "@components/mdx";
+import { BsDownload } from "react-icons/bs";
+import { motion } from "framer-motion";
+
+# komponen kustom
+
+Anda dapat meningkatkan artikel Anda dengan komponen khusus
+
+menggunakan `import { ... } from "@components/mdx"` Impor komponen khusus dengan mudah!
+
+## Accordion
+
+Ingin memberi tahu pengguna detail tambahan? gunakan `Accordion` komponen!
+
+```mdx
+import { Accordion } from "@components/mdx";
+
+**disini mengandung isi一Web3IDN**
+
+<Accordion title="Web3一IDN">WAGMI Yeahhhhh</Accordion>;
+```
+
+**disini mengandung isi一Web3IDN**
+
+<Accordion title="Web3一IDN">WAGMI Yeahhhhh</Accordion>
+
+## Admonition
+
+Ingin meminta atau memperingatkan pengguna? Anda dapat menggunakan `Admonition` komponen
+
+Ini mendukung beberapa jenis：`Tip`、`Warning`、`Info`、`Error`：
+
+```mdx
+import { Admonition, Error, Tip, Warning, Info } from "@components/mdx";
+
+<Admonition title="Default" />
+<Tip title="Tip" />
+<Warning title="warning" />
+<Info title="info" />
+```
+
+<Admonition title="Default" />
+<Tip title="Tip" />
+<Warning title="warning" />
+<Info title="info" />
+
+## Card
+
+Anda dapat menggunakan ini untuk mengalihkan pengguna ke halaman lain, ingat untuk menambahkan atribut `href`
+
+```mdx
+import { Card } from "@components/mdx";
+
+<Card title="arahkan ulang ke blog" href="/blog/welcome-to-web3id" />
+<Card title="tautan ke blog" href="/blog/welcome-to-web3id" arrow />
+```
+
+<Card title="arahkan ulang ke blog" href="/blog/welcome-to-web3id" />
+<Card
+  title="tautan ke blog"
+  href="/blog/welcome-to-web3id"
+  arrow
+  className="mt-2"
+/>
+
+## Link Button
+
+Tidak efektif untuk memasukkan URL? Anda dapat menggunakan tombol sebagai gantinya!
+
+<Info>_Anda mungkin memerlukan `w-fit` atau tombolnya akan terlalu lebar_</Info>
+
+```mdx
+import { LinkButton } from "@components/mdx";
+
+<LinkButton
+  href="/blog/welcome-to-web3id"
+  children="uji coba"
+  variant="secondary"
+/>
+
+<LinkButton
+  href="/blog/welcome-to-web3id"
+  target="_blank"
+  icon={<BsDownload />}
+  children="percobaan"
+  variant="primary"
+  link={{ className: "w-fit" }}
+/>
+```
+
+<div className='flex flex-col min-[400px]:flex-row gap-3 flex-wrap my-5'>
+  
+<LinkButton
+    href="/blog/welcome-to-web3id"
+    target="_blank"
+    icon={<BsDownload />}
+    children="uji"
+    variant='primary'
+/>
+
+<LinkButton
+  href="/blog/welcome-to-web3id"
+  target="_blank"
+  children="coba"
+  variant="primary"
+/>
+
+<LinkButton
+  href="/blog/welcome-to-web3id"
+  target="_blank"
+  icon={<BsDownload />}
+  children="uji"
+/>
+
+<LinkButton href="/blog/welcome-to-web3id" target="_blank" children="coba" />
+
+</div>
+
+## Steps
+
+Saat Anda sedang menulis tutorial, komponen ini berguna untuk menunjukkan hubungan di antara setiap step / langkah
+
+Anda dapat dengan mudah menggunakan `className` untuk mendapatkan efek ini, menggunakan judul `###` (h3) untuk menambahkan step：
+
+```mdx
+<div className='steps-container'>
+
+### Learn
+
+For invest times
+
+### Earn
+
+For learning outcomes
+
+</div>
+```
+
+<div className='steps-container'>
+
+### Learn
+
+learn to invest
+
+### Earn
+
+invest to learn
+
+</div>
+
+## Tab
+
+Mereka berasal dari kit eksternal `nextra-theme-docs`，tetapi Anda dapat menggunakannya dalam dokumen：
+
+```mdx
+import {(Tab, Tabs)} from "nextra-theme-docs";
+
+<Tabs items={['Open', 'Money']}>
+  <Tab>
+
+In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
+
+  </Tab>
+  <Tab>
+
+I don't know programming
+
+  </Tab>
+</Tabs>
+```
+
+<Tabs items={['Open', 'Money']}>
+  <Tab>
+	
+	  In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
+
+  </Tab>
+  <Tab>
+
+I don't know programming
+
+  </Tab>
+</Tabs>
+
+## File List
+
+Tampilkan file dan folder, berguna untuk tutorial
+
+```mdx
+import { FileTree } from "nextra-theme-docs";
+
+<FileTree>
+  <FileTree.Folder name="file Anda" defaultOpen>
+    <FileTree.Folder name="frameworks" defaultOpen>
+      <FileTree.File name="react.mdx" />
+      <FileTree.File name="svelte.mdx" />
+      <FileTree.File name="vue.mdx" />
+    </FileTree.Folder>
+    <FileTree.Folder name="fruits" defaultOpen>
+      <FileTree.File name="apple.mdx" />
+      <FileTree.File name="banana.mdx" />
+    </FileTree.Folder>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="about.mdx" />
+    <FileTree.File name="index.mdx" />
+  </FileTree.Folder>
+</FileTree>
+```
+
+<FileTree>
+  <FileTree.Folder name="file anda" defaultOpen>
+    <FileTree.Folder name="frameworks" defaultOpen>
+      <FileTree.File name="react.mdx" />
+      <FileTree.File name="svelte.mdx" />
+      <FileTree.File name="vue.mdx" />
+    </FileTree.Folder>
+    <FileTree.Folder name="fruits" defaultOpen>
+      <FileTree.File name="apple.mdx" />
+      <FileTree.File name="banana.mdx" />
+    </FileTree.Folder>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="about.mdx" />
+    <FileTree.File name="index.mdx" />
+  </FileTree.Folder>
+</FileTree>
+
+<br />
+
+## Build own
+
+Build your own components
+
+Mdx dapat digunakan dengan React dan Next.js, Anda dapat menggunakan sintaks jsx di file `.mdx`.
+
+Kami juga menggunakan Tailwind CSS untuk gaya css internal, yang berarti Anda dapat dengan mudah membuat komponen.
+
+<Tip title="petunjuk penting">Pastikan mereka mendukung mode terang dan gelap</Tip>
+### Kami menggunakan perpustakaan ini
+
+Anda dapat menggunakannya dalam dokumen Anda!
+
+- [framer-motion](https://www.framer.com/motion/)
+- `nextra`
+- `nextra-docs-theme`
+
+### Custom components (Tailwind CSS)
+
+```jsx
+<div className="border-2 border-black p-3 dark:border-white">Hello World</div>
+```
+
+<div className="border-2 border-black p-3 dark:border-white">Hello World</div>
+
+### Framer Motion
+
+Ini memungkinkan Anda membuat animasi keren dengan mudah
+
+<Cards>
+  <Card
+    href="https://www.framer.com/docs/"
+    target="_blank"
+    title="dokumentasi"
+  />
+</Cards>
+
+```jsx
+<motion.div
+  animate={{
+    scale: [1, 2, 2, 1, 1],
+    rotate: [0, 0, 270, 270, 0],
+    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+  }}
+/>
+```
+
+<div className="mt-4 flex flex-col items-center rounded-2xl bg-purple-500 p-5">
+  <motion.div
+    animate={{
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+    }}
+    transition={{
+      duration: 2,
+      ease: "easeInOut",
+      times: [0, 0.2, 0.5, 0.8, 1],
+      repeat: Infinity,
+      repeatDelay: 0.2,
+    }}
+    className="m-[5rem] h-10 w-10 bg-white md:h-32 md:w-32"
+  />
+</div>
+
+Sebaiknya Anda memahaminya untuk menciptakan pengalaman yang lebih baik bagi pengguna.

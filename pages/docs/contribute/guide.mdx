@@ -1,0 +1,199 @@
+---
+title: "Pedoman Kontribusi"
+description: "Bantu kami membuat dokumentasi lebih baik!"
+---
+
+import { Tabs, Tab } from "nextra-theme-docs";
+import { LinkButton } from "@components/mdx";
+
+# Pedoman Kontribusi
+
+<div className="steps-container mt-9">
+
+### Dimana letak halaman ?
+
+Semua file mdx terletak di folder `/pages`
+
+| Dokumentasi          | Blog        | Learn         |
+| ------------- | ------------- | ------------- |
+| `/pages/docs` | `/pages/blog` | `/pages/lean` |
+
+### Pembaruan metode impor gambar
+
+Versi sebelumnya memungkinkan Anda mengimpor gambar dari folder `/static` misalnya:
+
+```mdx
+![Foto ku](/my-photo.png)
+```
+
+Sekarang Anda harus meletakkan gambar Anda di folder `/public` dan mengimpornya menggunakan `![alt](@static/my-photo.png)`.
+
+```mdx
+# Sebelum
+
+![alt](/docs/my-photo.png)
+
+# Sekarang
+
+![alt](@static/docs/my-photo.png)
+```
+
+</div>
+
+## Bagaimana cara menambahkan halaman baru
+
+<div className="steps-container">
+  
+### Buat file .mdx
+
+Harap isi semua bidang
+
+<Tabs items={["Docs", "Blog", "Learn"]}>
+
+<Tab>
+
+Untuk membuat halaman baru di dokumentasi, buatlah file di folder `/pages/docs`
+
+```mdx
+---
+title: Judul disini
+description: Deskripsi disini
+---
+
+# Judul / Heading 1
+
+Teks disini...
+```
+
+</Tab>
+
+<Tab>
+  
+Untuk membuat postingan baru di blog, buatlah file di folder `/pages/blog`
+
+```mdx
+---
+title: Judul Postingan
+description: Deskripsi singkat blog?
+authors: [<nama-authors>]
+date: 2023/1/1
+image: "/blog/banner.jpg"
+tags: ["buat-tags"]
+---
+```
+
+#### Buatlah profile authors Anda sendiri
+
+Buka file `config.ts`, gulir dan cari baris ke `blogAuthors` dan tambahkan informasi pribadi Anda
+
+- Hindari teks yang panjang
+- Jangan memposting URL yang mencurigakan
+
+```ts
+export const blogAuthors: Record<string, AuthorData> = {
+  //...
+  abraham: {
+    name: "Abraham Yusuf",
+    title: "Bio anda",
+    url: "https://www.abrahamyusuf.my.id",
+    image_url: "/blog/abraham-yusuf.png", //masukkan gambar ke /public/blog/abraham-yusuf.png
+  },
+};
+```
+
+Anda kemudian dapat menggunakan `abraham` sebagai ID authors/penulis Anda
+
+</Tab>
+<Tab>
+  
+Untuk membuat kursus baru di Learning path, buatlah file di folder `/pages/learn`
+
+```mdx
+---
+title: Judul pelajaran
+description: Deskripsi singkat pelajaran?
+authors: [<nama-authors>]
+date: 2023/1/1
+image: "/learn/banner.jpg"
+tags: ["buat-tags"]
+---
+```
+
+#### Buatlah profile authors Anda sendiri
+
+Buka file `config.ts`, gulir dan cari baris ke `learnAuthors` dan tambahkan informasi pribadi Anda
+
+- Hindari teks yang panjang
+- Jangan memposting URL yang mencurigakan
+
+```ts
+export const learnAuthors: Record<string, AuthorLearnData> = {
+  //...
+  abraham: {
+    name: "Abraham Yusuf",
+    title: "Bio anda",
+    url: "https://www.abrahamyusuf.my.id",
+    image_url: "/learn/abraham-yusuf.png", //masukkan gambar ke /public/blog/abraham-yusuf.png
+  },
+};
+```
+
+Anda kemudian dapat menggunakan `abraham` sebagai ID authors/penulis Anda
+
+</Tab>
+
+</Tabs>
+
+### Membuat Konten
+
+Saya yakin Anda telah mempelajari beberapa sintaks Markdown dasar
+
+#### Perhatikan hal berikut
+
+- kata yang sesuai
+- Tidak ada promosi tentang personal
+- Tidak boleh bias atau politis
+
+#### Tingkatkan artikel
+
+- **Tipografi yang baik:**
+  Gunakan judul sekiranya banyak teks yang berantakan
+- **Spasi antara angka dan bahasa:**
+  Semuanya mengikuti [Panduan Penulisan Copywriting Bahasa Indonesia](https://glints.com/id/lowongan/copywriting-adalah/#.ZEuwaN3P3b0)
+- **Menggunakan komponen kostum:**
+  Anda dapat mempelajari lebih lanjut [dari sini](./components)
+
+### Mengurutkan halaman
+
+Anda harus mengedit `_meta.json` untuk mengubah urutan setiap halaman：
+
+```json
+{
+  "my-new-page": "judul halaman baru",
+  "index": "mulai cepat",
+  "commands": "petunjuk"
+}
+```
+
+### Ada pertanyaan?
+
+Jika Anda memerlukan dukungan, Anda dapat menghubungi grup dukungan kami
+
+
+<div className="h-stack mt-4">
+  <LinkButton href="https://discord.gg/aDaDw7DkYU" variant="primary">
+    Gabung Server
+  </LinkButton>
+</div>
+
+</div>
+
+### Kami menghapus sintaks lama
+
+Silakan gunakan komponen khusus/kustom sebagai gantinya
+
+```
+::: warning
+ini tidak lagi didukung
+:::
+```

@@ -1,0 +1,21 @@
+{
+    "*": {
+      "display": "true",
+      "theme": {
+        "footer": true,
+        "toc": true,
+        "pagination": true,
+        "sidebar": true
+      }
+    },
+    "tags": {
+      "title": "All Tags",
+      "display": "hidden",
+      "theme": {
+        "footer": true,
+        "toc": false,
+        "pagination": false,
+        "sidebar": false
+      }
+    }
+}
