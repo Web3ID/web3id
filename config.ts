@@ -47,6 +47,27 @@ export const footer: FooterCategory[] = [
     ],
   },
   {
+    title: "Community",
+    items: [
+      {
+        label: "BlockdevID",
+        href: "https://blockdev.id/",
+      },
+      {
+        label: "CoindeskID",
+        href: "https://www.coindesk.id/",
+      },
+      {
+        label: "Coinvestasi",
+        href: "https://coinvestasi.com/",
+      },
+      {
+        label: "Cryptoiz",
+        href: "https://cryptoizresearch.com/",
+      },
+    ],
+  },
+  {
     title: "Others",
     items: [
       {
