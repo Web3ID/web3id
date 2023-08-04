@@ -52,18 +52,22 @@ export const footer: FooterCategory[] = [
       {
         label: "BlockdevID",
         href: "https://blockdev.id/",
+        newWindow: true,
       },
       {
         label: "CoindeskID",
         href: "https://www.coindesk.id/",
+        newWindow: true,
       },
       {
         label: "Coinvestasi",
         href: "https://coinvestasi.com/",
+        newWindow: true,
       },
       {
         label: "Cryptoiz",
         href: "https://cryptoizresearch.com/",
+        newWindow: true,
       },
     ],
   },
