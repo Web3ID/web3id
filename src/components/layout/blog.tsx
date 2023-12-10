@@ -44,7 +44,7 @@ function PageContainer({
     <div className="mt-10">
       <p className="text-link text-base font-semibold lg:text-lg">
         {page.readingTime != null &&
-          `Reading time approx ${Math.round(page.readingTime.minutes)} minute`}
+          `Waktu membaca kira-kira ${Math.round(page.readingTime.minutes)} menit`}
       </p>
       <h1 className="mb-2 text-3xl font-extrabold leading-normal md:!text-[2.4rem]">
         {page.title}
