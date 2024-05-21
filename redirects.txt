@@ -1,6 +1,6 @@
-/invite https://w3b.my.id false
-/i https://w3b.my.id false
-/link https://w3b.my.id false
+/invite https://w3idn.xyz false
+/i https://w3idn.xyz false
+/link https://w3idn.xyz false
 /discord https://discord.gg/aDaDw7DkYU false
 /support https://www.patreon.com/Web3ID false
 /tos /terms false

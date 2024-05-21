@@ -53,7 +53,7 @@ const config: Partial<DocsThemeConfig> = {
       "Advancing blockchain education, research, resources and development Web3 Indonesia";
 
     return {
-      canonical: `https://w3b.my.id${asPath}`,
+      canonical: `https://w3idn.xyz${asPath}`,
       titleTemplate: route === "/" ? "%s" : "%s – Web3IDN",
       twitter: {
         handle: '@Web3IDN',
@@ -78,7 +78,7 @@ const config: Partial<DocsThemeConfig> = {
     extraContent: (
       <div className="flex flex-row gap-3">
         <ThemeToggle />
-        <Link href="https://w3b.my.id/" className="hidden md:block">
+        <Link href="https://w3idn.xyz/" className="hidden md:block">
           <LoginButton />
         </Link>
       </div>
