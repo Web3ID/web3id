@@ -4,7 +4,7 @@ import type { AuthorLearnData } from "@schema/learn";
 
 export const isProduction = process.env.NODE_ENV === "production";
 export const API_ENDPOINT = isProduction
-  ? "https://www.api.w3b.my.id"
+  ? "https://www.api.w3idn.xyz"
   : "http://127.0.0.1:3001";
 export const CDN_ENDPOINT = "https://cdn.discordapp.com";
 
