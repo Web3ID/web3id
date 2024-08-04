@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://w3b.my.id
+Host: https://w3idn.xyz
 
 # Sitemaps
-Sitemap: https://w3b.my.id/sitemap.xml
+Sitemap: https://w3idn.xyz/sitemap.xml
