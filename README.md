@@ -9,6 +9,8 @@
 
 Web3 Indonesia atau Web3IDN adalah platform edukasi, sumber penelitian sekaligus sumber daya pembangunan ekosistem blockchain & web3 berbasis di Indonesia.
 
+![Web3IDN](/public/img/logo/logo.png "Web3IDN Logo")
+
 Fokus kami ingin membangun Komunitas open source, sehingga siapapun bisa datang untuk belajar dan berkembang bersama terutama dibidang blockchain.
 
 Web3IDN adalah organisasi yang berdedikasi untuk memajukan pendidikan, penelitian, sumber daya, dan pengembangan dalam bidang teknologi blockchain di Indonesia. Kami berfokus pada membangun pemahaman yang lebih luas tentang teknologi blockchain, serta mendorong adopsi dan inovasi dalam ekosistem blockchain di Indonesia.
