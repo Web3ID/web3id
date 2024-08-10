@@ -7,8 +7,8 @@ import {
   BsArrowRightCircleFill,
 } from "react-icons/bs";
 import { Progress } from "../components/Progress";
-import KickBack from "@static/home/songs/kick-back.jpg";
-import FightSong from "@static/home/songs/eve-fight-song.jpg";
+import KickBack from "@static/public/img/logo.png";
+import FightSong from "@static/public/img/logo.png";
 import GreenGradient from "@static/home/green-gradient.svg";
 import { motion } from "framer-motion";
 import Gradient from "../components/Gradient";
