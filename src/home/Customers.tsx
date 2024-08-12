@@ -73,13 +73,13 @@ export function Customers({ usedBy }: { usedBy: number }) {
             content="Saya percaya bahwa ekosistem Blockchain dan Web3 akan berkembang pesat di negri tercinta ini."
           />
           <Comment
-            icon="/blog/money.jpg"
+            icon="/img/web3idn.png"
             author="dAppsID"
             title="dApps Builders"
             content="DAPP memiliki potensi untuk membuka beragam kasus penggunaan."
           />
           <Comment
-            icon="/blog/nathan.jpg"
+            icon="/img/web3idn.png"
             author="Anon Crypto"
             title="Blockchain Enthusiast"
             content="Diperlukan pandangan baru tentang keterlibatan tingkat dalam dan berbagi pengetahuan dalam blockchain dan aset kripto. Di mana kolaborasi adalah intinya, ego dikesampingkan dan nilai sejati diambil mulai dari zaman kita."
