@@ -3,7 +3,7 @@ module.exports = {
   "sites": [
     {
       "slug": "web3id",
-      "distDir": "./next",
+      "distDir": ".next/static",
       "buildCommand": "pnpm run build"
     }
   ]
