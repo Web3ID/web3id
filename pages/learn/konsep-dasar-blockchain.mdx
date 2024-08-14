@@ -1,0 +1,44 @@
+---
+slug: konsep-dasar-blockchain
+title: Konsep Dasar Blockchain
+authors: abrahamyusuf
+description: "Mulai Belajar Dasar Blockchain - Mengenal Konsep Dasar Blockchain"
+tags: ["Freshman", "Basic", "Blockchain"]
+image: /blog/content-blog/wtf-blockchain.png
+date: 2022-10-02T13:21:30
+---
+
+
+import { Admonition, Adsense, LinkButton, Card, Cards, Info } from "@components/mdx";
+import { FaCode, FaRoad } from "react-icons/fa";
+import { BsFillChatDotsFill } from "react-icons/bs";
+
+### Berikut ini beberapa Konsep Dasar Blockchain
+
+#### 1.1 Blok
+
+Blockchain, pada dasarnya, adalah sejumlah blok (Block) yang terkait satu sama lain untuk membentuk rantai (Chain). Blok adalah unit dasar dalam blockchain dan berisi sejumlah transaksi. Setiap blok memiliki beberapa elemen kunci:
+
+- **Data Transaksi**: Blok berisi data tentang berbagai transaksi yang telah terjadi. Ini bisa mencakup transfer Cryptocurrency, eksekusi smart contract, transfer/ pembelian NFT (Non-Fungible Token) atau catatan transaksi lainnya.
+
+- **Hash Blok Sebelumnya (Previous Block Hash)**: Setiap blok memiliki referensi ke hash (tanda tangan digital) dari blok sebelumnya dalam rantai. Ini adalah yang membuat rantai blok menjadi urutan yang tidak dapat diubah. Jika satu blok diubah, hash-nya akan berubah dan mempengaruhi blok selanjutnya dalam rantai.
+
+- **Waktu (Timestamp)**: Setiap blok memiliki cap waktu yang menunjukkan kapan blok tersebut dibuat. Ini penting untuk memastikan urutan transaksi dalam rantai.
+
+#### 1.2 Rantai Blok
+
+Rantai blok adalah hasil dari menghubungkan blok-blok ini secara berurutan. Ini menciptakan urutan kronologis transaksi yang tidak dapat diubah. Dengan demikian, jika Anda ingin memanipulasi satu transaksi dalam sejarah/riwayat, Anda harus memanipulasi semua blok yang mengikutinya, yang praktis tidak mungkin karena perlu melibatkan sebagian besar jaringan yang sangat besar.
+
+Rantai blok memastikan bahwa sejarah transaksi adalah catatan yang aman dan andal, dan semua peserta jaringan dapat memverifikasinya.
+
+#### 1.3 Kunci Publik (Public Key) dan Kunci Privat (Private Key)
+
+Kunci publik dan kunci privat adalah bagian penting dalam keamanan blockchain. Mereka digunakan dalam proses tanda tangan digital dan otentikasi pengguna. 
+
+- **Kunci Publik (Public Key)**: Ini adalah alamat yang dikenali oleh semua pengguna dalam jaringan. Ini seperti alamat Anda di dunia nyata yang digunakan untuk menerima transaksi (misalnya seperti nomor rekening bank pribadi). Orang lain menggunakan kunci publik Anda untuk mengirim dana atau berinteraksi dengan Anda dalam jaringan.
+
+- **Kunci Privat (Private Key)**: Ini adalah kunci rahasia yang hanya Anda ketahui (misalnya seperti password/kode brangkas atau pin bank pribadi). Ini digunakan untuk menandatangani transaksi dan membuktikan bahwa Anda adalah pemilik kunci publik tersebut. Kunci privat harus disimpan dengan sangat aman dan tidak boleh dibagikan dengan orang lain.
+
+Kombinasi kunci publik dan kunci privat memungkinkan pengguna untuk mengakses dan mengendalikan aset mereka di dalam blockchain, selain itu juga memungkinkan verifikasi transaksi oleh seluruh jaringan.
+
+Dengan pemahaman konsep dasar ini, kita dapat melanjutkan untuk menjelajahi lebih dalam mengenai cara blockchain bekerja dan mengapa ini menjadi dasar untuk inovasi dan perubahan dalam berbagai industri.
