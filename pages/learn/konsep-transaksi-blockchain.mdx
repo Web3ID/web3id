@@ -1,0 +1,43 @@
+---
+slug: konsep-transaksi-blockchain
+title: Konsep Dasar Transaksi Blockchain
+authors: abrahamyusuf
+description: "Mulai Belajar Dasar Blockchain - Mengenal Konsep Dasar Transaksi Blockchain"
+tags: ["Freshman", "Basic", "Blockchain"]
+image: /blog/content-blog/wtf-blockchain.png
+date: 2024-08-16T06:22:00
+---
+
+
+import { Admonition, Adsense, LinkButton, Card, Cards, Info } from "@components/mdx";
+import { FaCode, FaRoad } from "react-icons/fa";
+import { BsFillChatDotsFill } from "react-icons/bs";
+
+
+### Berikut ini beberapa Konsep Dasar Transaksi Blockchain dibuat dan divalidasi.
+
+#### 1.1 Bagaimana Transaksi Dibuat
+
+Transaksi dalam blockchain adalah inti dari penggunaan teknologi ini. Sebuah transaksi adalah tindakan yang mengirim atau menerima aset digital dalam jaringan blockchain. Berikut adalah langkah-langkah dasar dalam pembuatan transaksi:
+
+1. **Identifikasi Pihak Terlibat**: Transaksi biasanya melibatkan dua pihak - pengirim dan penerima. Setiap pihak memiliki kunci publik yang digunakan untuk mengidentifikasi alamat mereka di dalam jaringan.
+
+2. **Inisiasi Transaksi**: Pengirim memutuskan untuk memulai transaksi, menentukan jumlah aset yang akan dikirim, dan mengidentifikasi alamat (publik) penerima.
+
+3. **Penggunaan Kunci Private**: Pengirim menggunakan Kunci Private/Private Key mereka untuk menandatangani transaksi ini. Tanda tangan digital ini adalah cara untuk membuktikan bahwa mereka adalah pemilik kunci publik yang terkait dengan aset yang akan dikirim.
+
+4. **Pengiriman ke Jaringan**: Transaksi ditransmisikan ke jaringan blockchain, dan semua node dalam jaringan menerima salinan transaksi ini.
+
+#### 1.2 Validasi Transaksi
+
+Validasi transaksi adalah proses penting dalam blockchain yang memastikan bahwa transaksi yang diusulkan adalah sah dan memenuhi aturan jaringan. Berikut adalah cara transaksi divalidasi:
+
+1. **Verifikasi Tanda Tangan**: Node dalam jaringan memeriksa tanda tangan digital yang terdapat dalam transaksi. Ini memastikan bahwa transaksi tersebut hanya dapat dilakukan oleh pemilik kunci Private yang benar.
+
+2. **Saldo Cukup**: Node-node dalam jaringan memeriksa saldo akun pengirim. Transaksi hanya akan sah jika pengirim memiliki saldo yang cukup untuk menutup transaksi tersebut. Ini mencegah transaksi ganda atau penciptaan saldo palsu.
+
+3. **Konsensus**: Setelah transaksi dianggap sah oleh node-node yang memvalidasinya, transaksi ini dimasukkan ke dalam blok. Proses konsensus, seperti Proof of Work (PoW) atau Proof of Stake (PoS), digunakan untuk menentukan blok mana yang akan berisi transaksi ini.
+
+4. **Penambahan ke Rantai Blok**: Setelah transaksi dimasukkan ke dalam blok, blok tersebut ditambahkan ke rantai blok yang ada. Transaksi sekarang dianggap "tercatat" dalam sejarah blockchain dan tidak dapat diubah.
+
+Proses ini memastikan integritas dan keandalan transaksi dalam blockchain. Divalidasi oleh banyak node yang independen dan konsensus menjaga keamanan jaringan dan mencegah penipuan atau manipulasi transaksi. Dengan demikian, setiap transaksi dalam blockchain merupakan catatan yang sah dan dapat diverifikasi oleh siapa saja dalam jaringan.
