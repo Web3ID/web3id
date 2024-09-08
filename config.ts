@@ -65,6 +65,11 @@ export const footer: FooterCategory[] = [
         newWindow: true,
       },
       {
+        label: "AirdropFinder",
+        href: "https://www.airdropfinder.com/",
+        newWindow: true,
+      },
+      {
         label: "Cryptoiz",
         href: "https://cryptoizresearch.com/",
         newWindow: true,
@@ -110,7 +115,7 @@ export const learnRecommendations = [
 export const blogAuthors: Record<string, AuthorData> = {
   abrahamyusuf: {
     name: "Abraham Yusuf",
-    title: "Web3 Dev and Blockchain Enthusiast at @Web3IDN",
+    title: "Web3 Dev and Blockchain Research @Web3IDN",
     url: "https://github.com/abraham-yusuf",
     image_url: "/blog/abraham-yusuf.png",
   },
@@ -131,7 +136,7 @@ export const blogAuthors: Record<string, AuthorData> = {
 export const learnAuthors: Record<string, AuthorLearnData> = {
   abrahamyusuf: {
     name: "Abraham Yusuf",
-    title: "Web3 Dev and Blockchain Enthusiast at @Web3IDN",
+    title: "Web3 Dev and Blockchain Research @Web3IDN",
     url: "https://github.com/abraham-yusuf",
     image_url: "/blog/abraham-yusuf.png",
   },
