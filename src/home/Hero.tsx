@@ -99,6 +99,7 @@ function Servers({ secondary }: { secondary?: boolean }) {
       <Server img="/home/partners/blockdev-id.svg" name="BlockdevID" />
       <Server img="/home/partners/coindesk-indonesia.svg" name="CoindeskID" />
       <Server img="/home/partners/coinvestasi.svg" name="Coinvestasi" transparent />
+      <Server img="/home/partners/airdropfinder.png" name="AirdropFinder" transparent />
       <Server img="/home/partners/cryptoiz-research-logo.png" name="Cryptoiz" transparent />
       
     </div>
