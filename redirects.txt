@@ -1,6 +1,6 @@
-/invite https://w3idn.xyz false
-/i https://w3idn.xyz false
-/link https://w3idn.xyz false
+/invite https://www.web30.my.id false
+/i https://www.web30.my.id false
+/link https://www.web30.my.id false
 /discord https://discord.gg/aDaDw7DkYU false
 /support https://www.patreon.com/Web3ID false
 /tos /terms false
