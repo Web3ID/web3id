@@ -53,7 +53,7 @@ const config: Partial<DocsThemeConfig> = {
       "Advancing blockchain education, research, resources and development Web3 Indonesia";
 
     return {
-      canonical: `https://w3idn.xyz${asPath}`,
+      canonical: `https://www.web30.my.id${asPath}`,
       titleTemplate: route === "/" ? "%s" : "%s – Web3IDN",
       twitter: {
         handle: '@Web3IDN',
