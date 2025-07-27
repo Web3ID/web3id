@@ -1,6 +1,7 @@
 {
   "name": "web3idn",
   "private": true,
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
