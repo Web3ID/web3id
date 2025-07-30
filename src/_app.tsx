@@ -1,7 +1,6 @@
 import { AppProps } from "next/app";
 import { ReactElement } from "react";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import { AdsProvider } from "./adsense";
 
 import Script from "next/script";
@@ -15,7 +14,7 @@ const noto = Inter({
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
-      <Analytics />
+      
       <style jsx global>{`
         html {
           --font-noto: ${noto.style.fontFamily};
