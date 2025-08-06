@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex items-center mt-4 md:mt-0">
             <Link
               className="group text-gray-400 hover:text-gray-600 dark:hover:text-white mr-2 px-2"
-              href="https://x.com/andrevitorio"
+              href="https://x.com/Web3IDN"
               target="_blank"
             >
               <svg

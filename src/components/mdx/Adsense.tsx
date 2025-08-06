@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Admonition from "@components/mdx/Admonition";
 import { useAdsContext } from "../../adsense";
 import clsx from "clsx";
 
@@ -21,9 +20,9 @@ export function Adsense() {
 
   if (failed)
     return (
-      <Admonition title="kami opensource" type="warning">
-        Matikan AdBlocker untuk membantu kami di lain hari
-      </Admonition>
+    <h1 className="text-3xl font-bold underline">
+      Matikan AdBlocker untuk membantu kami di lain hari
+    </h1>
     );
 
   return (
