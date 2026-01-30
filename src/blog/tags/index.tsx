@@ -45,9 +45,11 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
   if (tag == null) return { notFound: true };
 
   const flattenPages = (page: PageMapItem): BlogPage[] => {
-    if (page.kind === "Meta") return [];
+    // MetaJsonFile has a 'data' property
+    if ('data' in page) return [];
 
-    if (page.kind === "Folder") {
+    // Folder has a 'children' property
+    if ('children' in page) {
       return page.children.flatMap(flattenPages);
     }
     const result = BlogPageSchema.safeParse(page);

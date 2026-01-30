@@ -27,13 +27,13 @@ export function getBlogPageMap(): MdxFile[] {
   const internal = (globalThis as any)[NEXTRA_INTERNAL] as NextraInternal;
 
   const blog = internal.pageMap.find(
-    (item) => item.kind === "Folder" && item.route === "/blog"
+    (item): item is Folder => 'children' in item && item.route === "/blog"
   );
 
-  const files = (blog as Folder)?.children || [];
+  const files = blog?.children || [];
 
   const pageMap = files.filter(
-    (item) => item.kind === "MdxPage" && !item.route.startsWith("/blog/tags")
+    (item): item is MdxFile => !('children' in item) && !('data' in item) && !item.route.startsWith("/blog/tags")
   ) as MdxFile[];
 
   return (globalThis.blogPagesMap = pageMap);

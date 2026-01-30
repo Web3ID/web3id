@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
-import { PageOpts } from "nextra";
+import { PageOptsWithRoute } from "@schema/blog";
 import { DocsPageOpts } from "../../schema/docs";
 import { ArticleJsonLd } from "next-seo";
 
@@ -8,7 +8,7 @@ export default function DocsLayout({
   page,
   children,
 }: {
-  page: PageOpts;
+  page: PageOptsWithRoute;
   children: ReactNode;
 }) {
   const docs = page as DocsPageOpts;

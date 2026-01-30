@@ -17,11 +17,40 @@ const config: Partial<DocsThemeConfig> = {
       />
     ),
   },
-  head: (
-    <>
-      <link rel="shortcut icon" href="/img/logo/logo.png" />
-    </>
-  ),
+  head: () => {
+    const { asPath, route } = useRouter();
+    const { frontMatter, title } = useConfig();
+
+    const image = frontMatter.image ?? "/img/web3idn.png";
+    const description =
+      frontMatter.description ??
+      "Advancing blockchain education, research, resources and development Web3 Indonesia";
+    
+    const titleTemplate = route === "/" ? title : `${title} – Web3IDN`;
+
+    return (
+      <>
+        <link rel="shortcut icon" href="/img/logo/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={titleTemplate} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://w3idn.xyz${asPath}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Web3IDN" />
+        <meta name="twitter:creator" content="@Web3IDN" />
+        <meta name="twitter:title" content={titleTemplate} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+        <link rel="canonical" href={`https://w3idn.xyz${asPath}`} />
+        <title>{titleTemplate}</title>
+      </>
+    );
+  },
   logo: (
     <div className="flex flex-row items-center justify-center gap-2">
       <Image
@@ -38,40 +67,6 @@ const config: Partial<DocsThemeConfig> = {
   ),
   search: {
     placeholder: "Search",
-  },
-  useNextSeoProps() {
-    const { asPath, route } = useRouter();
-    const { frontMatter, title } = useConfig();
-
-    const image = frontMatter.image != null && {
-      alt: title,
-      url: frontMatter.image,
-    };
-
-    const description =
-      frontMatter.description ??
-      "Advancing blockchain education, research, resources and development Web3 Indonesia";
-
-    return {
-      canonical: `https://w3idn.xyz${asPath}`,
-      titleTemplate: route === "/" ? "%s" : "%s – Web3IDN",
-      twitter: {
-        handle: '@Web3IDN',
-        site: '@Web3IDN',
-        cardType: "summary_large_image",
-      },
-      description: description,
-      openGraph: {
-        description: description,
-        type: "website",
-        images: [
-          image || {
-            url: "/img/web3idn.png",
-            alt: "Web3IDN",
-          },
-        ],
-      },
-    };
   },
   docsRepositoryBase: "https://github.com/Web3ID/web3id/blob/master",
   navbar: {
@@ -98,15 +93,9 @@ const config: Partial<DocsThemeConfig> = {
     extraContent: <></>,
   },
   editLink: {
-    text: "Edit this page on Github →",
+    content: "Edit this page on Github →",
   },
   sidebar: {
-    titleComponent({ title, type }) {
-      if (type === "separator") {
-        return <span className="cursor-default text-xl">{title}</span>;
-      }
-      return <>{title}</>;
-    },
     toggleButton: true,
   },
   gitTimestamp: ({ timestamp }) => {

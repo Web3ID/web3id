@@ -1,11 +1,11 @@
-{
+export default {
   "*": {
-    "display": "hidden",
+    "display": "true",
     "theme": {
       "footer": true,
       "toc": true,
-      "pagination": false,
-      "sidebar": false
+      "pagination": true,
+      "sidebar": true
     }
   },
   "tags": {

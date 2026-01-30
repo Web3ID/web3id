@@ -5,7 +5,7 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ["/blog/tags/*"],
+  exclude: ["/blog/tags/*", "*/_meta"],
   additionalSitemaps: [
     'https://www.web30.my.id/sitemap.xml',
     'https://www.web30.my.id/sitemap-0.xml',

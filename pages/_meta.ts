@@ -1,4 +1,4 @@
-{
+export default {
   "index": {
     "title": "Web3IDN",
     "type": "page",

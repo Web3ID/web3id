@@ -6,14 +6,13 @@ import { Features } from "./features";
 import Sponsor from "./Sponsor";
 import { fetchGuild } from "@utils/api";
 import { GetStaticProps } from "next";
-import { useSSG } from "nextra/data";
 
 export type HomeProps = {
   serverMembers: number;
   guildCount: number;
 };
 
-export const getStaticProps: GetStaticProps<{ ssg: HomeProps }> = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const { guildCount, serverMembers } = await fetchGuild().catch(() => ({
     guildCount: 0,
     serverMembers: 0,
@@ -21,18 +20,14 @@ export const getStaticProps: GetStaticProps<{ ssg: HomeProps }> = async () => {
 
   return {
     props: {
-      ssg: {
-        serverMembers,
-        guildCount,
-      },
+      serverMembers,
+      guildCount,
     },
     revalidate: 60,
   };
 };
 
-export default function HomePage() {
-  const { guildCount, serverMembers } = useSSG() as HomeProps;
-
+export default function HomePage({ guildCount, serverMembers }: HomeProps) {
   return (
     <div className="bg-white dark:bg-black">
       <style global jsx>

@@ -3,7 +3,7 @@ title: komponen kustom
 description: Tingkatkan artikel Anda dengan komponen khusus/kustom!
 ---
 
-import { Tabs, Tab, FileTree } from "nextra-theme-docs";
+import { Tabs, FileTree } from "nextra/components";
 import {
   Accordion,
   Admonition,
@@ -165,36 +165,36 @@ invest to learn
 
 ## Tab
 
-Mereka berasal dari kit eksternal `nextra-theme-docs`，tetapi Anda dapat menggunakannya dalam dokumen：
+Mereka berasal dari kit eksternal `nextra/components`，tetapi Anda dapat menggunakannya dalam dokumen：
 
 ```mdx
-import {(Tab, Tabs)} from "nextra-theme-docs";
+import { Tabs } from "nextra/components";
 
 <Tabs items={['Open', 'Money']}>
-  <Tab>
+  <Tabs.Tab>
 
 In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
 
-  </Tab>
-  <Tab>
+  </Tabs.Tab>
+  <Tabs.Tab>
 
 I don't know programming
 
-  </Tab>
+  </Tabs.Tab>
 </Tabs>
 ```
 
 <Tabs items={['Open', 'Money']}>
-  <Tab>
+  <Tabs.Tab>
 	
 	  In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
 
-  </Tab>
-  <Tab>
+  </Tabs.Tab>
+  <Tabs.Tab>
 
 I don't know programming
 
-  </Tab>
+  </Tabs.Tab>
 </Tabs>
 
 ## File List

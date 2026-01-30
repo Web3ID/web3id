@@ -3,7 +3,7 @@ title: "Pedoman Kontribusi"
 description: "Bantu kami membuat dokumentasi lebih baik!"
 ---
 
-import { Tabs, Tab } from "nextra-theme-docs";
+import { Tabs } from "nextra/components";
 import { LinkButton } from "@components/mdx";
 
 # Pedoman Kontribusi
@@ -50,7 +50,7 @@ Harap isi semua bidang
 
 <Tabs items={["Docs", "Blog", "Learn"]}>
 
-<Tab>
+<Tabs.Tab>
 
 Untuk membuat halaman baru di dokumentasi, buatlah file di folder `/pages/docs`
 
@@ -65,9 +65,9 @@ description: Deskripsi disini
 Teks disini...
 ```
 
-</Tab>
+</Tabs.Tab>
 
-<Tab>
+<Tabs.Tab>
   
 Untuk membuat postingan baru di blog, buatlah file di folder `/pages/blog`
 
@@ -103,8 +103,8 @@ export const blogAuthors: Record<string, AuthorData> = {
 
 Anda kemudian dapat menggunakan `abraham` sebagai ID authors/penulis Anda
 
-</Tab>
-<Tab>
+</Tabs.Tab>
+<Tabs.Tab>
   
 Untuk membuat kursus baru di Learning path, buatlah file di folder `/pages/learn`
 
@@ -140,7 +140,7 @@ export const learnAuthors: Record<string, AuthorLearnData> = {
 
 Anda kemudian dapat menggunakan `abraham` sebagai ID authors/penulis Anda
 
-</Tab>
+</Tabs.Tab>
 
 </Tabs>
 

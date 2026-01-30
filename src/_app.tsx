@@ -1,16 +1,12 @@
 import { AppProps } from "next/app";
 import { ReactElement } from "react";
-import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { AdsProvider } from "./adsense";
 
 import Script from "next/script";
 
-const noto = Inter({
-  variable: "--font-noto",
-  preload: true,
-  subsets: ["latin"],
-});
+// Google Fonts - will be loaded via link in theme.config.tsx head
+// to avoid build-time network requirements in sandboxed environments
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
@@ -18,7 +14,8 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
       <Analytics />
       <style jsx global>{`
         html {
-          --font-noto: ${noto.style.fontFamily};
+          --font-noto: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family: var(--font-noto);
         }
       `}</style>
       <Script

@@ -27,13 +27,13 @@ export function getLearnPageMap(): MdxFile[] {
   const internal = (globalThis as any)[NEXTRA_INTERNAL] as NextraInternal;
 
   const learn = internal.pageMap.find(
-    (item) => item.kind === "Folder" && item.route === "/learn"
+    (item): item is Folder => 'children' in item && item.route === "/learn"
   );
 
-  const files = (learn as Folder)?.children || [];
+  const files = learn?.children || [];
 
   const pageMap = files.filter(
-    (item) => item.kind === "MdxPage" && !item.route.startsWith("/learn/tags")
+    (item): item is MdxFile => !('children' in item) && !('data' in item) && !item.route.startsWith("/learn/tags")
   ) as MdxFile[];
 
   return (globalThis.learnPagesMap = pageMap);

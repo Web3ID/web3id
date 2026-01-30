@@ -6,7 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { Fragment } from "react";
 import { getTagHref } from "@blog/utils/tags";
-import { PageOpts } from "nextra";
+import { PageOptsWithRoute } from "@schema/blog";
 import { AuthorData, BlogFrontMatterSchema } from "../../schema/blog";
 import { BlogJsonLd } from "./blog-json-ld";
 
@@ -14,7 +14,7 @@ export default function BlogLayout({
   page,
   children,
 }: {
-  page: PageOpts;
+  page: PageOptsWithRoute;
   children: ReactNode;
 }) {
   const blog: BlogPageOpts = {

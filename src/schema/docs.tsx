@@ -1,6 +1,11 @@
 import { PageOpts, FrontMatter } from "nextra";
 
-export type DocsPageOpts = Omit<PageOpts, "frontMatter"> & {
+// Augment PageOpts with route property that exists at runtime
+export type PageOptsWithRoute = PageOpts & {
+  route: string;
+};
+
+export type DocsPageOpts = Omit<PageOptsWithRoute, "frontMatter"> & {
   frontMatter: DocsFrontMatter;
 };
 

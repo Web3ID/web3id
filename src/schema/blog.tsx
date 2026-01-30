@@ -11,7 +11,12 @@ export type AuthorData = {
   image_url?: string;
 };
 
-export type BlogPageOpts = Omit<PageOpts, "frontMatter"> & {
+// Augment PageOpts with route property that exists at runtime
+export type PageOptsWithRoute = PageOpts & {
+  route: string;
+};
+
+export type BlogPageOpts = Omit<PageOptsWithRoute, "frontMatter"> & {
   frontMatter: BlogFrontMatter;
 };
 
